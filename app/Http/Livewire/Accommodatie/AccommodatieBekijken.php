@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Livewire\Bestemming;
+namespace App\Http\Livewire\Accommodatie;
 
 use App\Models\Accommodatie;
 use App\Models\Bestemming;
 use Livewire\Component;
 
-class BestemmingBekijken extends Component
+class AccommodatieBekijken extends Component
 {
     public Bestemming $bestemming;
 
@@ -14,7 +14,7 @@ class BestemmingBekijken extends Component
     {
         $accommodatie = Accommodatie::where('idbestemming', '=', $this->bestemming->idbestemming)->get();
 
-        return view('livewire.bestemming.bestemming-bekijken', [
+        return view('livewire.accommodatie.accommodatie-bekijken', [
             'accommodatie' => $accommodatie,
             ]);
     }

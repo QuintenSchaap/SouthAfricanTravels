@@ -9,8 +9,8 @@
                     <li class="{{ '/' == request()->path() ? 'font-italic text-white' : ''}}">
                 <a style="margin-left: 20px" class="nav-item lead nav-link text-light" href="/">Home</a>
                     </li>
-                    <li class="{{ 'bestemming' == request()->path() ? 'font-italic text-white' : ''}}">
-                <a style="margin-left: 10px" class="nav-item lead nav-link text-light" href="/bestemming">Bestemming</a>
+                    <li class="{{ 'accommodatie' == request()->path() ? 'font-italic text-white' : ''}}">
+                        <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/accommodatie">Accommodatie</a>
                     </li>
                     <li class="{{ 'reis' == request()->path() ? 'font-italic text-white' : ''}}">
                 <a style="margin-left: 10px" class="nav-item lead nav-link text-light" href="/reis">Reis</a>

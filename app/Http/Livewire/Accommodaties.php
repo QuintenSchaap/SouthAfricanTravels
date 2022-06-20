@@ -8,7 +8,7 @@ use App\Models\Bestemming;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 
-class Bestemmingen extends Component
+class Accommodaties extends Component
 {
     use WithPagination;
 
@@ -16,23 +16,23 @@ class Bestemmingen extends Component
 
     public $search;
 
-    public $bestemmingenlijst;
+    public $accommodatieslijst;
     public $prijzen;
 
-    public $bestemmingFilter = 0;
+    public $accommodatieFilter = 0;
     public $datumVanafFilter = 0;
     public $datumTotFilter = 0;
     public $prijsFilter = 0;
 
     public function mount()
     {
-        $this->bestemmingenlijst = Bestemming::orderBy('naambestemming', 'ASC')->get();
+        $this->accommodatieslijst = Bestemming::orderBy('naam', 'ASC')->get();
         $this->prijzen = Bestemming::orderBy('prijs', 'ASC')->get();
     }
 
     public function leegFilters()
     {
-        $this->bestemmingFilter = 0;
+        $this->accommodatieFilter = 0;
         $this->datumVanafFilter = 0;
         $this->datumTotFilter = 0;
         $this->prijsFilter = 0;
@@ -44,9 +44,9 @@ class Bestemmingen extends Component
     {
         $search = '%'.$this->search.'%';
 
-        $bestemmingen = Bestemming::query()->where([['naambestemming', 'LIKE', '%' . $this->search . '%'],])
-            ->when($this->bestemmingFilter != 0, function (Builder $query): Builder {
-                return $query->where('naambestemming', $this->bestemmingFilter);
+        $bestemmingen = Bestemming::query()->where([['naam', 'LIKE', '%' . $this->search . '%'],])
+            ->when($this->accommodatieFilter != 0, function (Builder $query): Builder {
+                return $query->where('naam', $this->accommodatieFilter);
             })->when($this->datumVanafFilter != 0, function (Builder $query): Builder {
                 return $query->where('startdatum', '>=', $this->datumVanafFilter);
             })->when($this->datumTotFilter != 0, function (Builder $query): Builder {
@@ -63,7 +63,7 @@ class Bestemmingen extends Component
                 return $query->where('prijs', '<=', 2500);
             })->orderBy('idbestemming', 'DESC')->paginate(5);
 
-        return view('livewire.bestemming', [
+        return view('livewire.accommodatie.accommodatie', [
             'bestemmingen' => $bestemmingen,
         ]);
     }
