@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/c51e4834fc.js" crossorigin="anonymous"></script>
-<header style="margin-bottom: 25px">
+<header style="margin-bottom: 25px; position: sticky; top: 0; z-index: 100;">
     @livewireStyles
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="" style="padding-left: 10px">South African Travels</a>

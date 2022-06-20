@@ -32,7 +32,7 @@ class Bestemmingen extends Component
 
     public function leegFilters()
     {
-        $this->bgit clone git aestemmingFilter = 0;
+        $this->bestemmingFilter = 0;
         $this->datumVanafFilter = 0;
         $this->datumTotFilter = 0;
         $this->prijsFilter = 0;
