@@ -7,13 +7,13 @@
 <form class="form" wire:submit.prevent="store">
 <div style="margin: 50px">
     <div class="card border-dark mb-3">
-        <b><div class="card-header">{{ $bestemming->naambestemming }}</div></b>
+        <b><div class="card-header">{{ $bestemming->naam }}</div></b>
         <div class="card-body text-dark">
             <table class="table table-bordered" style="padding: 25px; width:100%; font-size: 15px">
                 <tbody>
                 <tr>
                     <th scope="col">Locatie</th>
-                    <td>{{ $bestemming->plaatsbestemming }}, {{ $bestemming->land->land  }}</td>
+                    <td>{{ $bestemming->plaats }}, {{ $bestemming->land->land  }}</td>
                 </tr>
                 <tr>
                     @foreach ($accommodatie as $accommodaties)
@@ -70,14 +70,14 @@
                 </tr>
                 <tr>
                     <th scope="col">Foto</th>
-                    <td><img src='{{ URL::asset("images/bestemming/$bestemming->naambestemming.jpg") }}'></td>
+                    <td><img src='{{ URL::asset("images/accommodatie/$bestemming->naam.jpg") }}'></td>
                     @endforeach
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <a class="btn btn-secondary" style="color: white;" href="/bestemming/bekijken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-arrow-left"></i> Terug</a>
+    <a class="btn btn-secondary" style="color: white;" href="/accommodatie/bekijken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-arrow-left"></i> Terug</a>
     <button class="btn btn-primary" type="submit">Opslaan</button>
 </div>
 </form>

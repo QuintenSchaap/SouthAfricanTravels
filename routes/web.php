@@ -23,11 +23,11 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 
 Route::get('/', App\Http\Livewire\Beginscherm::class)->name('beginpagina');
 
-Route::group(['prefix' => 'bestemming', 'as' => 'bestemmingen.'], function () {
-    Route::get('/', App\Http\Livewire\Bestemmingen::class)->name('bestemmingen');
-    Route::get('/bekijken/{bestemming}', App\Http\Livewire\Bestemming\BestemmingBekijken::class)->name('bestemming-bekijken');
-    Route::get('/boeken/{bestemming}', App\Http\Livewire\Bestemming\BestemmingReserveren::class)->name('bestemming-boeken');
-    Route::get('/bewerken/{bestemming}', App\Http\Livewire\Bestemming\BestemmingWijzigen::class)->name('bestemming-bewerken')->middleware('auth');
+Route::group(['prefix' => 'accommodatie', 'as' => 'accommodaties.'], function () {
+    Route::get('/', App\Http\Livewire\Accommodaties::class)->name('accommodatie');
+    Route::get('/bekijken/{bestemming}', App\Http\Livewire\Accommodatie\AccommodatieBekijken::class)->name('accommodatie-bekijken');
+    Route::get('/boeken/{bestemming}', App\Http\Livewire\Accommodatie\AccommodatieReserveren::class)->name('accommodatie-boeken');
+    Route::get('/bewerken/{bestemming}', App\Http\Livewire\Accommodatie\AccommodatieWijzigen::class)->name('accommodatie-bewerken')->middleware('auth');
 });
 
 Route::group(['prefix' => 'reis', 'as' => 'reizen.'], function () {

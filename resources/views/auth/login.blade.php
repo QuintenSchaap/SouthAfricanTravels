@@ -6,7 +6,7 @@
         <a class="navbar-brand" href="" style="padding-left: 10px">South African Travels</a>
         <div class="navbar-nav">
             <a style="color: white; padding-left: 20px" class="nav-item lead nav-link" href="/">Home</a>
-            <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/bestemming">Bestemming</a>
+            <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/accommodatie">Accommodatie</a>
             <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/reis">Reizen</a>
             @guest
             <a style="color: white;" class="nav-item lead nav-link" href="/login">Inloggen</a>

@@ -9,7 +9,7 @@
 </style>
 <div style="margin: 50px">
     <div class="card border-dark mb-3">
-        <b><div class="card-header">Boeking bij {{ $bestemming->naambestemming }}</div></b>
+        <b><div class="card-header">Boeking bij {{ $bestemming->naam }}</div></b>
         <div class="card-body text-dark">
             <table class="table table-bordered" style="padding: 25px; width:100%; font-size: 15px">
                 <tbody>
@@ -46,6 +46,6 @@
             </table>
         </div>
     </div>
-    <a class="btn btn-secondary" style="color: white;" href="/bestemming/bekijken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-arrow-left"></i> Terug</a>
-    <a class="btn btn-primary" style="color: white;" href="/bestemming/boeken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-plus"></i> Reserveren</a>
+    <a class="btn btn-secondary" style="color: white;" href="/accommodatie/bekijken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-arrow-left"></i> Terug</a>
+    <a class="btn btn-primary" style="color: white;" href="/accommodatie/boeken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-plus"></i> Reserveren</a>
 </div>
