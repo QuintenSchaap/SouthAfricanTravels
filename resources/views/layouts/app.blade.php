@@ -51,7 +51,7 @@
                     <h6 class="text-uppercase fw-bold mb-2">Snelle links</h6>
                     <p>
                         <a style="color: #6c757d" href="/" class="text-reset">Home</a><br>
-                        <a style="color: #6c757d" href="/bestemming" class="text-reset">Bestemming</a><br>
+                        <a style="color: #6c757d" href="/accommodatie" class="text-reset">Accommodatie</a><br>
                         <a style="color: #6c757d" href="/reis" class="text-reset">Reizen</a><br>
                         <a style="color: #6c757d" href="/login" class="text-reset">Inloggen</a><br>
                     </p>

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use function Symfony\Component\Mime\Header\all;
@@ -15,11 +15,9 @@ use function Symfony\Component\Mime\Header\all;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('login', [CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
-Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user')->middleware('auth');
-Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom')->middleware('auth');
-Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')->middleware('auth');
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::post('custom-login', [LoginController::class, 'customLogin'])->name('login.custom');
+Route::get('signout', [LoginController::class, 'signOut'])->name('signout')->middleware('auth');
 
 Route::get('/', App\Http\Livewire\Beginscherm::class)->name('beginpagina');
 
