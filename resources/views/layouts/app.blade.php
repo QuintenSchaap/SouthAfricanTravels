@@ -5,15 +5,27 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="" style="padding-left: 10px">South African Travels</a>
             <div class="navbar-nav">
-                <a style="color: white; padding-left: 20px" class="nav-item lead nav-link" href="/">Home</a>
-                <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/bestemming">Bestemming</a>
-                <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/reis">Reis</a>
+                <ul class="nav">
+                    <li class="{{ '/' == request()->path() ? 'font-italic text-white' : ''}}">
+                <a style="margin-left: 20px" class="nav-item lead nav-link text-light" href="/">Home</a>
+                    </li>
+                    <li class="{{ 'bestemming' == request()->path() ? 'font-italic text-white' : ''}}">
+                <a style="margin-left: 10px" class="nav-item lead nav-link text-light" href="/bestemming">Bestemming</a>
+                    </li>
+                    <li class="{{ 'reis' == request()->path() ? 'font-italic text-white' : ''}}">
+                <a style="margin-left: 10px" class="nav-item lead nav-link text-light" href="/reis">Reis</a>
+                    </li>
+                    <li class="{{ '/login' == request()->path() ? 'font-italic text-white' : ''}}">
                 @guest
-                <a style="color: white;" class="nav-item lead nav-link" href="/login">Inloggen</a>
+                <a class="nav-item lead nav-link text-light" href="/login">Inloggen</a>
                 @endguest
+                    </li>
+                    <li class="{{ 'loguit' == request()->path() ? 'font-italic' : ''}}">
                 @auth
-                <a style="color: white;" class="nav-item lead nav-link" href="/signout">Uitloggen</a>
+                <a class="nav-item lead nav-link text-light" href="/signout">Uitloggen</a>
                 @endauth
+                    </li>
+                </ul>
             </div>
     </nav>
 </header>

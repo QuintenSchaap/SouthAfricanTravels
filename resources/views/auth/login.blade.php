@@ -7,9 +7,11 @@
         <div class="navbar-nav">
             <a style="color: white; padding-left: 20px" class="nav-item lead nav-link" href="/">Home</a>
             <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/bestemming">Bestemming</a>
-            <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/reis">Reizen</a>
+            <a style="color: white; padding-left: 10px" class="nav-item lead nav-link" href="/reis">Reis</a>
             @guest
+            <li class="{{ 'login' == request()->path() ? 'font-italic text-white' : ''}}">
             <a style="color: white;" class="nav-item lead nav-link" href="/login">Inloggen</a>
+            </li>
             @endguest
             @auth
             <a style="color: white;" class="nav-item lead nav-link" href="/signout">Uitloggen</a>
