@@ -16,9 +16,13 @@ return new class extends Migration
         Schema::create('bestemming', function (Blueprint $table) {
             $table->id('idbestemming');
             $table->foreignId('idland');
-            $table->string('naambestemming');
+            $table->string('naam');
+            $table->string('plaats');
             $table->string('prijs');
-            $table->text('kortebeschrijving')->nullable();
+            $table->text('beschrijving')->nullable();
+            $table->string('foto');
+            $table->date('startdatum');
+            $table->date('einddatum');
         });
     }
 
