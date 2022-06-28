@@ -37,7 +37,11 @@
                 </tr>
                 <tr>
                     <th scope="col">Foto</th>
+                    @if (File::exists("images/reis/$reis->naamreis.jpg"))
                     <td><img src='{{ URL::asset("images/reis/$reis->naamreis.jpg") }}' style="height: 400px; width: 650px"></td>
+                    @else
+                    <td><img src='{{ URL::asset("images/reis/standaard.jpg") }}' style="height: 400px; width: 650px"></td>
+                    @endif
                 </tr>
                 </tbody>
             </table>
