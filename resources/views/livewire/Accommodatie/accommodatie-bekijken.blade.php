@@ -58,7 +58,4 @@
     </div>
     <a class="btn btn-secondary" style="color: white;" href="/accommodatie"><i class="fa-solid fa-arrow-left"></i> Terug</a>
     <a class="btn btn-primary" style="color: white;" href="/accommodatie/boeken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-plus"></i> Reserveren</a>
-    @auth
-    <a class="btn btn-dark" style="color: white;" href="/accommodatie/bewerken/{{ $bestemming->idbestemming }}"><i class="fa-solid fa-pen-to-square"></i> Bewerken</a>
-    @endauth
 </div>

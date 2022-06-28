@@ -4,6 +4,11 @@
         word-wrap:break-word
     }
 </style>
+@if (session()->has('reisVeranderd'))
+<div class="alert alert-success" style="margin-top: 25px; margin-bottom: -25px; margin-right: 50px; margin-left: 50px">
+    {{ session('reisVeranderd') }}
+</div>
+@endif
 <div style="margin: 50px">
     <div class="card border-dark mb-3">
         <b><div class="card-header">{{ $reis->naamreis }}</div></b>
