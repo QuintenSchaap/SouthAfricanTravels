@@ -1,4 +1,9 @@
 <div style="margin: 50px">
+    @if (session()->has('reisVerwijderd'))
+    <div class="alert alert-danger" id="verwijderbericht" style="margin-top: -25px; margin-bottom: 30px">
+        {{ session('reisVerwijderd') }}
+    </div>
+    @endif
     <div class="form-row" style="margin-top: -20px">
         <div class="form-group col-md-3">
             <label>Begin datum:</label>
@@ -15,6 +20,11 @@
         <div class="form-group col-md-1" style="margin-top: 33px">
             <button class="btn btn-primary" wire:click="leegFilters">Filters leeghalen</button>
         </div>
+        @auth
+        <div class="form-group col-md-1" style="margin-top: 33px; margin-left: 30px">
+            <a class="btn btn-secondary" style="color: white;" href="/reis/nieuw"> Nieuwe reis aanmaken</a>
+        </div>
+        @endauth
     </div>
     @foreach($reizen as $reis)
     <div class="card border-secondary" style="margin-top: 10px; height: 250px;">

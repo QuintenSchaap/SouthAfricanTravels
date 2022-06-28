@@ -13,6 +13,8 @@ class Bestemming extends Model
 
     protected $primaryKey = 'idbestemming';
 
+    public $timestamps = false;
+
     public function land()
     {
         return $this->hasOne(Land::class, 'idland', 'idland');

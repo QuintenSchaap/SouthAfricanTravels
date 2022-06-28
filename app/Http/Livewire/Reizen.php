@@ -31,7 +31,7 @@ class Reizen extends Component
             return $query->where('einddatum', '<=', $this->datumTotFilter);
         })->orderBy('idreis', 'DESC')->paginate(5);
 
-        return view('livewire.reizen', [
+        return view('livewire.reis.reizen', [
             'reizen' => $reizen,
         ]);
     }

@@ -25,7 +25,6 @@ Route::group(['prefix' => 'accommodatie', 'as' => 'accommodaties.'], function ()
     Route::get('/', App\Http\Livewire\Accommodaties::class)->name('accommodatie');
     Route::get('/bekijken/{bestemming}', App\Http\Livewire\Accommodatie\AccommodatieBekijken::class)->name('accommodatie-bekijken');
     Route::get('/boeken/{bestemming}', App\Http\Livewire\Accommodatie\AccommodatieReserveren::class)->name('accommodatie-boeken');
-    Route::get('/bewerken/{bestemming}', App\Http\Livewire\Accommodatie\AccommodatieWijzigen::class)->name('accommodatie-bewerken')->middleware('auth');
 });
 
 Route::group(['prefix' => 'reis', 'as' => 'reizen.'], function () {
@@ -33,6 +32,7 @@ Route::group(['prefix' => 'reis', 'as' => 'reizen.'], function () {
     Route::get('/bekijken/{reis}', App\Http\Livewire\Reis\ReisBekijken::class)->name('reis-bekijken');
     Route::get('/boeken/{reis}', App\Http\Livewire\Reis\ReisReserveren::class)->name('reis-boeken');
     Route::get('/bewerken/{reis}', App\Http\Livewire\Reis\ReisWijzigen::class)->name('reis-bewerken')->middleware('auth');
+    Route::get('/nieuw', App\Http\Livewire\Reis\ReisWijzigen::class)->name('reis-aanmaken')->middleware('auth');
 });
 
 

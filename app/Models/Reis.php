@@ -13,6 +13,8 @@ class Reis extends Model
 
     protected $primaryKey = 'idreis';
 
+    public $timestamps = false;
+
     public function land()
     {
         return $this->hasOne(Land::class, 'idland', 'idland');
