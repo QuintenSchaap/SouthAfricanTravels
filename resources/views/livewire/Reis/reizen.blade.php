@@ -30,7 +30,11 @@
     <div class="card border-secondary" style="margin-top: 10px; height: 250px;">
         <div class="row">
             <div class="col">
+                @if (File::exists("images/reis/$reis->naamreis.jpg"))
                 <img class="rounded border border-dark card-img" src='{{ URL::asset("images/reis/$reis->naamreis.jpg") }}' alt="Foto laden mislukt" style="height: 200px; width: 350px; margin: 25px">
+                @else
+                <img class="rounded border border-dark card-img" src='{{ URL::asset("images/reis/standaard.jpg") }}' alt="Foto laden mislukt" style="height: 200px; width: 350px; margin: 25px">
+                @endif
             </div>
             <div class="col-xl-8 mt-4">
                 <a style="text-decoration: none" href="/reis/bekijken/{{ $reis->idreis }}">
